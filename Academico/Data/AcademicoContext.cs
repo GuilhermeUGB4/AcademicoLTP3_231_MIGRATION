@@ -5,9 +5,9 @@ namespace Academico.Data
 {
     public class AcademicoContext : DbContext
     {
-        public AcademicoContext(DbContextOptions options) : base(options)
+        public AcademicoContext(DbContextOptions<AcademicoContext> options) : base(options)
         {
         }
-        DbSet<Instituicao> Instituicoes { get; set; }
+        public DbSet<Instituicao> Instituicoes { get; set; }
     }
 }
